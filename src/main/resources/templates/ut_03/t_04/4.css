@@ -1,0 +1,19 @@
+.wrapper {
+    margin: 50px;
+}
+
+.slide-enter {
+    opacity: 0;
+}
+
+.slide-enter-active {
+    transition: opacity .6s;
+}
+
+.slide-leave-active {
+    transition: opacity .6s;
+}
+
+.slide-leave-to {
+    opacity: 0;
+}

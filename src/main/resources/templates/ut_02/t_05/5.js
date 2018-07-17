@@ -1,5 +1,5 @@
 Vue.component('task', {
-    template: '<h1>{{message}}</h1>'
+    template: '<h1>{{message}}</h1>',
     props: ["message"]
 });
 

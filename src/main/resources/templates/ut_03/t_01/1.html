@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
+    <link href="1.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sample">
+        <input type="text" :value="name"
+        v-on:input="name=$event.target.value">
+        <hr>
+        <h2>qwe, {{name}}</h2>
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="1.js"></script>
+</body>
+</html>
