@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>qwe, {{name}}</h1>
+    <h3>{{userInfo}}</h3>
+    <h3><a :href="url">homepage</a></h3>
+    <button @click="changeName">change</button>
+    <hr>
+    <hr>
+    add book:
+    <input type="text" v-model="currentBook">
+    <button @click="addBook">add book</button>
+    <hr>
+    <div v-if="books.length>0">
+        Books
+        <ul>
+            <li v-for="book in books">{{book}}</li>
+        </ul>
+    </div>
+    <max></max>
+</div>
+
+<script src="1.js"></script>
+</body>
+</html>
