@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>hello {{name}}</h1>
+    <h1>{{userInfo}}</h1>
+    <h3><a :href="url">Home</a></h3>
+    <button @click="changeName">Change to...</button>
+    <hr>
+    add book: <input type="text" v-model="currentBook">
+    <button @click="addBook">Add book</button>
+    <hr>
+    <div v-if="books.length > 0">
+        Books
+        <ul>
+            <li v-for="book in books">{{book}}</li>
+        </ul>
+    </div>
+    <max></max>
+</div>
+
+<script>
+    Vue.component("max", {
+       template: "<h1>ffffffffffff</h1>"
+
+    });
+
+    new Vue({
+        el: "#app",
+        data: {
+            name: "max",
+            age: 34,
+            currentBook: "asd",
+            books: [],
+            url: "https://ya.ru"
+        },
+        methods: {
+            changeName: function () {
+                this.name = "ju";
+            },
+            addBook: function () {
+                this.books.push(this.currentBook);
+            }
+        },
+        computed: {
+            userInfo: function () {
+                return this.name + " is " + this.age;
+            }
+        },
+        watch: {
+            name: function () {
+                console.log(this.name);
+            }
+        }
+    })
+</script>
+</body>
+</html>
