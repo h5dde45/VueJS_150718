@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="sample">
+        <button class="btn btn-primary" v-on:click="showH2=!showH2"
+                v-bind:title="btnText">
+            Toggle header
+        </button>
+        <hr>
+        <transition name="slide">
+            <h2 v-show="showH2" class="alert alert-success"> = {{sum}}</h2>
+        </transition>
+        <hr>
+        <app-progress val="2" max="10"></app-progress>
+        <hr>
+
+        <button class="btn btn-success" v-on:click="addNumber">
+            Add
+        </button>
+        <ul class="list-group">
+            <li class="list-group-item"
+                v-for="number in numbers"
+            >{{number}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
