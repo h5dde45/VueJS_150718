@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <button @click="show=!show">Hide/Show</button>
+    <p v-if="show">asd</p>
+    <p v-else>{{message | lowercase}}</p>
+    <!--<p v-show="show">qwe</p>-->
+    <ul>
+        <li v-for="(car,i) in cars">
+            {{i+1}}. {{car.model}} - {{car.speed}}
+        </li>
+    </ul>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
