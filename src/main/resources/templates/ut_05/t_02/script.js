@@ -9,7 +9,16 @@ new Vue({
             bookisbn: "",
             technologies: ""
         },
-        showDetails: false
+        showDetails: false,
+        book: {
+            title: "",
+            url: ""
+        }
+    },
+    methods: {
+        submit: function () {
+            this.showDetails = true;
+        }
     },
     computed: {
         fullname: function () {
@@ -18,6 +27,11 @@ new Vue({
         },
         splitString: function () {
             return this.formData.technologies.split(',');
+        }
+    },
+    watch: {
+        "formData.bookisbm": function () {
+let url="";
         }
     }
 });
